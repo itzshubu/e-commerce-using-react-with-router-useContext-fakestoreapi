@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+  h1 {
+    @apply text-4xl font-bold text-blue-600; /* Custom H1 styles */
+  }
+  h2 {
+    @apply text-3xl font-semibold text-blue-500; /* Custom H2 styles */
+  }
+  h3 {
+    @apply text-2xl font-medium text-blue-400; /* Custom H3 styles */
+  }
+  p {
+    @apply text-base text-gray-700 leading-relaxed; /* Custom paragraph styles */
+  }
+  a {
+    @apply text-blue-500 no-underline hover:text-blue-700; /* Custom anchor tag styles */
+  }
+  ul {
+    @apply list-disc pl-5; /* Custom unordered list styles */
+  }
+  ol {
+    @apply list-decimal pl-5; /* Custom ordered list styles */
+  }
+}
+
+@layer components{
+    .btn{
+        @apply bg-blue-500 text-white px-4 py-2 rounded;
+    }
+    .btn-second{
+        @apply bg-blue-500 text-white px-4 py-2 rounded;
+    }
+}
+
+@layer utilities {
+    .text-brand {
+      color: #ff6347; /* Custom text color */
+    }
+  
+    .bg-brand {
+      background-color: #ff6347; /* Custom background color */
+    }
+  
+    .card-shadow {
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* Custom box-shadow */
+    }
+    .main-color{
+      @apply bg-blue-200
+    }
+  }
