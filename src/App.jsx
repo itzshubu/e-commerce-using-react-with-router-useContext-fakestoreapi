@@ -1,4 +1,5 @@
 import { useEffect, useState, useContext } from "react";
+import Headroom from 'react-headroom';
 import "./App.css";
 import Navbar from "./components/navbar";
 import Footer from "./components/Footer";
@@ -22,7 +23,9 @@ function App() {
   return (
     <CartContextProvider>
     <productContext.Provider value={data}>
+      <Headroom>
       <Navbar />
+      </Headroom>
       <Outlet />
       <Footer />
     </productContext.Provider>
