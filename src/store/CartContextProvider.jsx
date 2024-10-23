@@ -5,7 +5,11 @@ const CartContextProvider = ({ children }) => {
   const [items, setItems] = useState(
     ()=>{
       let data = JSON.parse(localStorage.getItem("cart"))
-      return data
+      if(data){
+        return data
+      } else {
+         return []
+        }
     }
   );
    localStorage.setItem("cart",JSON.stringify(items))
